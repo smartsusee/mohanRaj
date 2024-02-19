@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      #parent {
+        width: 100%;
+        height: 300px;
+        background-color: aqua;
+        animation-name: animate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      /* 
+      @keyframes animate {
+        25% {
+          background-image: url(../bg_1.avif);
+        }
+        43% {
+          background-image: url(../img/Slide1.JPG);
+        }
+
+        75% {
+          background-color: green;
+        }
+        100% {
+          background-color: violet;
+        }
+      } */
+      #img-slider img {
+        width: 1200px;
+        height: 300px;
+        animation-name: animate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes animate {
+        25% {
+          transform: translate(-500px);
+        }
+        50%,
+        60% {
+          transform: translate(-1400px);
+        }
+      }
+      #img-slider {
+        display: flex;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="img-slider">
+      <img src="../bg_1.avif" alt="" />
+      <img src="../bg_1.avif" alt="" />
+      <img src="../bg_1.avif" alt="" />
+      <img src="../bg_1.avif" alt="" />
+    </div>
+    <!-- <div id="parent"></div> -->
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+
+        grid-template-areas:
+          "h h h "
+          "s1 m s2 "
+          "f f f";
+        text-align: center;
+      }
+      #container div {
+        border: 1px solid black;
+      }
+      #header {
+        grid-area: h;
+      }
+      #sub1 {
+        grid-area: s1;
+      }
+      #main {
+        grid-area: m;
+      }
+      #sub2 {
+        grid-area: s2;
+      }
+      #footer {
+        grid-area: f;
+      }
+      p:hover::after {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: red;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: -40px;
+      }
+      #div:hover {
+        cursor: pointer;
+        border: 2px solid black;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Css Grid Concept</h1>
+
+    <div id="div">hellos</div>
+
+    <!-- 
+                 header
+
+       sub1       main         sub2         
+
+                footer -->
+
+    <div id="container">
+      <div id="header">header</div>
+      <div id="sub1">sub1</div>
+      <div id="main">main</div>
+      <div id="sub2">sub2</div>
+      <div id="footer">footer</div>
+    </div>
+    <p>hello</p>
+  </body>
+</html>

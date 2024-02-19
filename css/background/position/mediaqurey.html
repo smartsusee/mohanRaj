@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      #box_1 {
+        width: 100%;
+        background-color: red;
+        height: 60px;
+      }
+
+      @media (max-width: 768px) {
+        #box_1 {
+          width: 100%;
+          background-color: rgb(98, 255, 0);
+          height: 60px;
+        }
+
+        #ul {
+          width: 300px;
+
+          height: 60px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-left: 200px !important;
+          /* background-color: yellow; */
+        }
+      }
+
+      @media (max-width: 425px) {
+        #box_1 {
+          width: 50%;
+          background-color: rgb(21, 0, 255);
+          height: 100px;
+        }
+        #ul {
+          width: 300px;
+
+          height: 60px;
+          display: flex;
+          flex-direction: column;
+          line-height: 30px;
+          margin-top: 20px;
+          position: absolute;
+          justify-content: space-around;
+          align-items: center;
+          margin-left: -40px !important;
+          /* background-color: yellow; */
+        }
+        ul li {
+          color: aliceblue;
+        }
+      }
+
+      #ul {
+        width: 300px;
+
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 700px;
+        /* background-color: yellow; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box_1">
+      <ul id="ul">
+        <li>home</li>
+        <li>help</li>
+        <li>product</li>
+      </ul>
+    </div>
+  </body>
+</html>

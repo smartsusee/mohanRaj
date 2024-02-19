@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="cart"></div>
+    <div id="cart_1"></div>
+
+    <script>
+      let product = [
+        {
+          id: 0,
+          name: "i phone",
+        },
+        {
+          id: 1,
+          name: "samsung",
+        },
+        { id: 2, name: "oppo" },
+      ];
+
+      let full_data = [...product];
+
+      document.getElementById("cart").innerHTML = full_data
+        .map((v) => {
+          i = 0;
+          return (
+            `  <div>${v.id}</div>
+           ` +
+            "<button onclick='addtocart(" +
+            i++ +
+            ")'>add to cart</button>"
+          );
+        })
+        .join("");
+      let cart = [];
+      function addtocart(a) {
+        cart.push({ ...full_data[a] });
+        display();
+      }
+
+      function display(a) {
+        j = 0;
+        if (cart.length == 0) {
+          document.getElementById("cart_1").innerHTML = "cart is empty";
+        } else {
+          document.getElementById("cart_1").innerHTML = full_data
+            .map((v) => {
+              return (
+                `  <div>${v.id}</div>
+           ` +
+                "<button onclick='delete(" +
+                j++ +
+                ")'>delete</button>"
+              );
+            })
+            .join("");
+        }
+        console.log(j);
+      }
+    </script>
+  </body>
+</html>

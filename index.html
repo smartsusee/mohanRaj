@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 500px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>name</th>
+        <th>email</th>
+        <th colspan="2">role</th>
+      </tr>
+
+      <tr>
+        <td rowspan="2">sugumar</td>
+        <td>xxx@mail.com</td>
+        <td rowspan="2">backend</td>
+        <td rowspan="2">frontend</td>
+      </tr>
+
+      <tr>
+        <td>yyy@mail.com</td>
+      </tr>
+    </table>
+
+    <script>
+      let array = [45, 65, 34, 89];
+
+      array.filter((v, i, a) => {
+        if (36 > v) {
+          console.log(v + 10);
+        }
+      });
+    </script>
+  </body>
+</html>
